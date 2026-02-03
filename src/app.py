@@ -3,17 +3,17 @@ import streamlit as st
 from datetime import datetime, timedelta
 
 
-st.title("🕒 Your personal End of Business")
+st.title("🕒 Work-Life Calculator")
 
-start_time = st.time_input("You startet at", value=datetime.strptime("08:00", "%H:%M").time(), step=60)
+start_time = st.time_input("You started at", value=datetime.strptime("08:00", "%H:%M").time(), step=60)
 
-work_hours = st.number_input("Workhours today", min_value=0, max_value=12, value=7)
+work_hours = st.number_input("Working Hours", min_value=0, max_value=12, value=7)
 
-work_minutes = st.number_input("Workminutes today", min_value=0, max_value=59, value=36)
+work_minutes = st.number_input("Working Minutes", min_value=0, max_value=59, value=36)
 
-break_minutes = st.number_input("Your pause today", min_value=0, max_value=120, value=45)
+break_minutes = st.number_input("Break", min_value=0, max_value=120, value=45)
 
-if st.button("Calculate EOB"):
+if st.button("Calculate Clock-Out"):
 
     start_dt = datetime.combine(datetime.today(), start_time)
 
