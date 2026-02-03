@@ -19,4 +19,4 @@ if st.button("Calculate Clock-Out"):
 
     end_dt = start_dt + timedelta(hours=work_hours, minutes=work_minutes + break_minutes)
 
-    st.success(f"Your EOB: {end_dt.strftime('%H:%M')}")
+    st.success(f"Life starts at {end_dt.strftime('%H:%M')}")
